@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OptionsController">
+   <children>
+      <VBox alignment="CENTER" layoutX="142.0" layoutY="109.0" prefHeight="182.0" prefWidth="316.0" spacing="40.0">
+         <children>
+            <CheckBox fx:id="soundsEffectsCheckBox" mnemonicParsing="false" onMousePressed="#change" text="Sounds effects on">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font></CheckBox>
+            <CheckBox fx:id="musicCheckBox" layoutX="166.0" layoutY="136.0" mnemonicParsing="false" onAction="#turnMusic" onMousePressed="#change" text="Music on">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </VBox>
+      <Button layoutX="371.0" layoutY="291.0" mnemonicParsing="false" onAction="#saveSettings" prefHeight="29.0" prefWidth="98.0" style="-fx-background-color: white;" text="Save Settings">
+         <font>
+            <Font name="Georgia" size="13.0" />
+         </font></Button>
+      <Button alignment="CENTER" graphicTextGap="10.0" layoutX="14.0" layoutY="336.0" mnemonicParsing="false" onAction="#backMenu" onMouseMoved="#infoView" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white;" text="Main Menu">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/cofnij.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="254.0" layoutY="50.0" text="Options">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="203.0" layoutY="108.0" prefWidth="200.0" />
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="198.0" layoutY="340.0" prefHeight="51.0" prefWidth="342.0">
+         <font>
+            <Font name="Georgia" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

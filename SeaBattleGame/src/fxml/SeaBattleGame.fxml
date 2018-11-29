@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SeaBattleGameController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/water.jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="2.0" light="$null" specularConstant="0.5" specularExponent="1.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="580.0" layoutY="100.0" prefHeight="250.0" prefWidth="25.0" spacing="5.4">
+         <children>
+            <Label text="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="10">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="40.0" layoutY="100.0" prefHeight="250.0" prefWidth="25.0" spacing="5.4">
+         <children>
+            <Label text="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="10">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="33.0" layoutY="100.0" prefHeight="250.0" prefWidth="868.0" spacing="290.0">
+         <children>
+            <AnchorPane prefHeight="278.0" prefWidth="244.0">
+               <children>
+                  <GridPane fx:id="playerMap" gridLinesVisible="true" prefHeight="250.0" prefWidth="250.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane fx:id="computerMap" gridLinesVisible="true" prefHeight="250.0" prefWidth="250.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="70.0" layoutY="351.0" prefHeight="35.0" prefWidth="250.0" spacing="70.0">
+         <children>
+            <Button fx:id="resetButton" graphicTextGap="6.0" mnemonicParsing="false" onAction="#resetMap" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: white;" text="Reset">
+               <font>
+                  <Font name="Georgia" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/reset.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="applyButton" graphicTextGap="6.0" mnemonicParsing="false" onAction="#applyMap" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: white;" text="Apply">
+               <font>
+                  <Font name="Georgia" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/apply.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </HBox>
+      <Button graphicTextGap="7.0" layoutX="14.0" layoutY="484.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: white;" text="Main Menu">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView cache="true" fitHeight="42.0" fitWidth="44.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icons/anchor.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER" graphicTextGap="10.0" layoutX="735.0" layoutY="496.0" mnemonicParsing="false" onAction="#endGame" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #4153ab;" text="End Game" textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/lifebuoy.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="70.0" layoutY="41.0" prefHeight="20.0" prefWidth="100.0" text="Player:">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="611.0" layoutY="41.0" prefHeight="21.0" prefWidth="124.0" text="Computer:">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textArea" layoutX="330.0" layoutY="371.0" prefHeight="170.0" prefWidth="272.0" style="-fx-background-color: blue;">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font></TextArea>
+      <HBox alignment="BOTTOM_LEFT" layoutX="70.0" layoutY="75.0" prefHeight="25.0" prefWidth="250.0" spacing="16.0">
+         <children>
+            <Label text="A">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="B">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="38.0" layoutY="10.0" text="C">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="38.0" layoutY="10.0" text="D">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="66.0" layoutY="10.0" text="E">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="66.0" layoutY="10.0" text="F">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="66.0" layoutY="10.0" text="G">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="94.0" layoutY="10.0" text="H">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="94.0" layoutY="10.0" text="I">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="10.0" text="J">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" layoutX="611.0" layoutY="75.0" prefHeight="25.0" prefWidth="250.0" spacing="16.0">
+         <children>
+            <Label text="A">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="B">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="38.0" layoutY="10.0" text="C">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="38.0" layoutY="10.0" text="D">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="66.0" layoutY="10.0" text="E">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="66.0" layoutY="10.0" text="F">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="66.0" layoutY="10.0" text="G">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="94.0" layoutY="10.0" text="H">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="94.0" layoutY="10.0" text="I">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="10.0" text="J">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="341.0" layoutY="75.0" prefHeight="184.0" prefWidth="250.0" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="273.0" prefHeight="20.0" prefWidth="100.0" text="YOUR HITS">
+         <font>
+            <Font name="Georgia Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="273.0" prefHeight="20.0" prefWidth="100.0" text="ENEMY HITS">
+         <font>
+            <Font name="Georgia" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="460.0" layoutY="270.0" orientation="VERTICAL" prefHeight="100.0" style="-fx-background-color: blue;" />
+      <Label fx:id="playerHitsLabel" alignment="CENTER" layoutX="350.0" layoutY="300.0" prefHeight="50.0" prefWidth="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyHitsLabel" alignment="CENTER" layoutX="480.0" layoutY="300.0" prefHeight="50.0" prefWidth="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <MenuBar layoutX="367.0" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: white;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Game">
+            <items>
+              <MenuItem fx:id="newGame" mnemonicParsing="false" onAction="#startNewGame" text="New Game" />
+                  <MenuItem fx:id="statistics" mnemonicParsing="false" onAction="#openStatisticsWindow" text="Statistics" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#check" text="Options">
+               <items>
+                  <CheckMenuItem fx:id="turnM" mnemonicParsing="false" selected="true" text="Turn Music" />
+                  <CheckMenuItem fx:id="turnSE" mnemonicParsing="false" selected="true" text="Turn Sounds Effects" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="help" mnemonicParsing="false" onAction="#openHelpWindow" text="What now" />
+            </items>
+          </Menu>
+        </menus>
+         <padding>
+            <Insets left="5.0" top="10.0" />
+         </padding>
+      </MenuBar>
+      <Label fx:id="createByLabel" layoutX="776.0" layoutY="6.0" prefHeight="40.0" prefWidth="124.0">
+         <font>
+            <Font name="Gill Sans Nova Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

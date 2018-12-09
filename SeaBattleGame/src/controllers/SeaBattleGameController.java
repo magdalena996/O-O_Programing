@@ -111,8 +111,8 @@ public class SeaBattleGameController {
         computerMapFill(computerMap, computerButtonsArray);
 
         // and placing computer ships
-         setComputerShips(computerShips);
-       // placeComputerShips();
+        setComputerShips(computerShips);
+        // placeComputerShips();
         textArea.setText(HELP_TEXT);
 
 //        if(musicStatus)
@@ -136,24 +136,25 @@ public class SeaBattleGameController {
                 ship.createShip(playerButtonsArray, playerShips, x, y, hOrV);
                 numberOfShips++;
                 ifOneShip = true;
+                System.out.println(playerCells);
             }
             if (numberOfShips == 1) {
                 count++;
                 numberOfShips = 0;
             }
         } else if (count == 2) {
-            Ship ship = new Ship(3);
-            if ((x >= 2 && hOrV.equals("Vertical")) || (y <= 7 && hOrV.equals("Horizontal"))) {
-                playerCells += 3;
-                fxmlUtils.getSoundsEffects("splash");
-                ship.createShip(playerButtonsArray, playerShips, x, y, hOrV);
-                numberOfShips++;
-            }
-            if (numberOfShips == 2) {
-                count++;
-                numberOfShips = 0;
-            }
-
+                Ship ship = new Ship(3);
+                if ((x >= 2 && hOrV.equals("Vertical")) || (y <= 7 && hOrV.equals("Horizontal"))) {
+                    playerCells += 3;
+                    fxmlUtils.getSoundsEffects("splash");
+                    ship.createShip(playerButtonsArray, playerShips, x, y, hOrV);
+                    numberOfShips++;
+                    System.out.println(playerCells);
+                }
+                if (numberOfShips == 2) {
+                    count++;
+                    numberOfShips = 0;
+                }
         } else if (count == 3) {
             Ship ship = new Ship(2);
             if ((x >= 1 && hOrV.equals("Vertical")) || (y <= 8 && hOrV.equals("Horizontal"))) {
@@ -235,7 +236,7 @@ public class SeaBattleGameController {
                 computerCount++;
                 numberOfComputerShips = 0;
             }
-           // System.out.println(computerCount);
+            // System.out.println(computerCount);
         }
 
     }
@@ -312,6 +313,7 @@ public class SeaBattleGameController {
             computerMap.setDisable(true);
             openStatisticsWindow();
             gameStage = "end";
+            showComputerShips(computerShips,computerButtonsArray);
         }
 
         enemyHitsLabel.setText(computerHits + " / " + enemyShoots);
@@ -353,6 +355,7 @@ public class SeaBattleGameController {
             computerMap.setDisable(true);
             openStatisticsWindow();
             gameStage = "end";
+            showComputerShips(computerShips,computerButtonsArray);
         }
 
         if (ifPlayerMissed)
@@ -411,6 +414,7 @@ public class SeaBattleGameController {
         numberOfShips = 0;
         count = 1;
         ifOneShip = false;
+        playerCells = 0;
 
 //        for(Coordinate coordinate: playerShips){
 //            System.out.println(coordinate.toString());
@@ -457,6 +461,7 @@ public class SeaBattleGameController {
         ifOneShip = false;
         ifStartGame = false;
         playerShips.clear();
+        playerCells = 0;
     }
 
     public void endGame() {
@@ -473,6 +478,7 @@ public class SeaBattleGameController {
         menuController.openApplication();
         playerShips.clear();
         textArea.clear();
+        playerCells = 0;
     }
 
     public void openHelpWindow() {
@@ -494,17 +500,13 @@ public class SeaBattleGameController {
 
     // checking if checkMenuItem (turnM or turnSE) is selected or not, and doing proper instructions
     public void check() {
-        if(turnM.isSelected()){
+        if (turnM.isSelected()) {
             musicPlayer.play();
             musicStatus = true;
-        }else {
+        } else {
             musicPlayer.stop();
             musicStatus = false;
         }
-        if(turnSE.isSelected()){
-            soundsEffectsStatus = true;
-        }else {
-            soundsEffectsStatus = false;
-        }
+        soundsEffectsStatus = turnSE.isSelected();
     }
 }

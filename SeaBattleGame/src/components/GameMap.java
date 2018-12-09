@@ -65,25 +65,43 @@ public class GameMap {
 
     }
 
-    private static Coordinate getRandomCoordinate(){
+    private static Coordinate getRandomCoordinate() {
         Random random = new Random();
         int x = random.nextInt(10);
         int y = random.nextInt(10);
-        return new Coordinate(x,y);
+        return new Coordinate(x, y);
     }
 
-    public static int getRandomX (){
+    public static int getRandomX() {
         Coordinate coordinate = getRandomCoordinate();
         return coordinate.getX();
     }
 
-    public static  int getRandomY(){
+    public static int getRandomY() {
         Coordinate coordinate = getRandomCoordinate();
         return coordinate.getY();
     }
 
     public static void computerMapFill(GridPane computerMap, Button[][] computerButtonsArray) {
         mapFill(computerMap, computerButtonsArray);
+    }
+
+    public static void showComputerShips(List<Coordinate> computerShips, Button[][] computerButtonsArray) {
+        int tempX;
+        int tempY;
+        for (int i = 0; i < computerButtonsArray.length; i++) {
+            for (int j = 0; j < computerButtonsArray.length; j++) {
+                computerButtonsArray[i][j].setStyle("-fx-background-color: #8ac8ff;" +
+                        "-fx-background-radius: 0; -fx-border-width: 1; -fx-border-color: black;");
+            }
+        }
+        for (Coordinate coordinate : computerShips) {
+            tempX = coordinate.getX();
+            tempY = coordinate.getY();
+            computerButtonsArray[tempX][tempY].setStyle("-fx-background-color: brown; " +
+                    "-fx-background-radius: 0; -fx-border-width: 1; -fx-border-color: black;");
+        }
+
     }
 
 }
